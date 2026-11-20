@@ -156,10 +156,6 @@ html body{
      position: relative;
  }
 
- #heroCarousel .carousel-indicators [data-bs-target] {
-     background-color: var(--primary-color);
- }
-
  .btn-gold {
      background-color: var(--accent-gold);
      color: #fff;
@@ -1095,11 +1091,22 @@ html body{
     }
 
     #home {
-        padding-top: 72px;
+        padding-top: 90px;
     }
 
     #heroCarousel .carousel-item {
-        height: min(48vw, calc(100vh - 72px));
+        height: min(calc(37.5vw + 64px), 400px, calc(100vh - 90px));
+        background-size: contain;
+        background-position: center top;
+    }
+
+    #fabrics {
+        margin-top: 0.75rem !important;
+        padding-top: 0.5rem !important;
+    }
+
+    #fabrics > .container {
+        padding-top: 0 !important;
     }
 
     #heroCarousel .carousel-inner > .carousel-item:nth-child(1) {
@@ -1116,6 +1123,24 @@ html body{
 }
 
 @media (max-width: 767.98px) {
+    #home {
+        padding-top: 80px;
+    }
+
+    #heroCarousel .carousel-item {
+        height: min(46vw, calc(100vh - 80px));
+        background-size: cover;
+    }
+
+    #heroCarousel .carousel-inner > .carousel-item:nth-child(1),
+    #heroCarousel .carousel-inner > .carousel-item:nth-child(3) {
+        background-position: right center;
+    }
+
+    #heroCarousel .carousel-inner > .carousel-item:nth-child(2) {
+        background-position: left center;
+    }
+
     #about .row {
         --bs-gutter-x: 1.5rem;
     }
